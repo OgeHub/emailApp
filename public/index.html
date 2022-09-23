@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon" />
+    <!-- css styles -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- Font awesome icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Email App</title>
+  </head>
+  <body>
+    <form action="/sendEmail" method="POST" enctype="multipart/form-data">
+      <h2>EMAIL SENDER APPLICATION</h2>
+      <div class="input-wrapper">
+        <i class="fa fa-user icon"></i>
+
+        <input
+          class="input-field"
+          type="text"
+          placeholder="Recipient"
+          name="email"
+          autocomplete="off"
+          type="email"
+          required
+        />
+      </div>
+      <div class="input-wrapper">
+        <i class="fa fa-envelope icon"></i>
+
+        <input
+          class="input-field"
+          type="text"
+          placeholder="Subject"
+          name="subject"
+          autocomplete="off"
+          required
+        />
+      </div>
+
+      <div class="input-wrapper">
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Message body..."
+          style="height: 200px; width: 100%"
+          autocomplete="off"
+          required
+        ></textarea>
+      </div>
+
+      <div class="attachment-wrapper">
+        <label for="attachment">Attach a file here</label>
+        <input id="attachment" name="attachment" type="file" />
+      </div>
+
+      <button type="submit" class="send-btn">Send Mail</button>
+    </form>
+  </body>
+</html>
