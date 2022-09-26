@@ -24,7 +24,11 @@ const attachmentUpload = multer({
 }).single('attachment');
 
 app.get('/', (req, res) => {
-  res.sendFile('/public/index.html');
+  res.sendFile(`${__dirname}/public/index.html`);
+});
+
+app.get('/success', (req, res) => {
+  res.sendFile(`${__dirname}/public/success.html`);
 });
 
 app.post('/sendEmail', (req, res) => {
@@ -60,13 +64,13 @@ app.post('/sendEmail', (req, res) => {
             console.log(error);
           } else {
             // Success block
-            console.log('Email sent: ' + info.response);
+            console.log(`Email sent: ${info.response}`);
             fs.unlink(attachmentPath, (err) => {
               if (err) {
                 res.end(err);
               } else {
                 console.log(`${attachmentPath} has been deleted`);
-                return res.redirect('/success.html');
+                return res.redirect('/success');
               }
             });
           }
