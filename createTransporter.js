@@ -17,7 +17,7 @@ const createTransporter = async () => {
     refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
   });
 
-  const accessToken = await new Promise((resolve, reject) => {
+  const accessToken = new Promise((resolve, reject) => {
     oauth2Client.getAccessToken((err, token) => {
       if (err) {
         reject('Failed to create access token :( ' + err);
