@@ -7,7 +7,7 @@
  2. Enter  the email subject
  3. Enter the email
  4. Attach a single file
- 5  Click on the send button.
+ 5. Click on the send button.
  
 ### Major technologies:
  - NodeJS
@@ -24,7 +24,7 @@
       1. Choose any port (e.g 3000)
       2. Register on [Google Cloud Platform](https://console.cloud.google.com)
       3. Create a project, and obtain your client ID and client secret.
-      4. Goto the [Google playground](https://developers.google.com/oauthplayground) to generate your refresh token
+      4. Go to the [Google playground](https://developers.google.com/oauthplayground) to generate your refresh token
  - Run `npm run dev` on your terminal
  
  
