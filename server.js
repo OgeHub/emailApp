@@ -34,7 +34,7 @@ app.get('/success', (req, res) => {
 app.post('/sendEmail', (req, res) => {
   attachmentUpload(req, res, async (error) => {
     if (error) {
-      console.log(err);
+      console.log(error);
       return res.send('Error uploading file');
     } else {
       const recipient = req.body.email;
